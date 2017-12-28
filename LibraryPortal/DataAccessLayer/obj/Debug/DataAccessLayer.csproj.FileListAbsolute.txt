@@ -1,0 +1,16 @@
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\DataAccessLayer.dll.config
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\CommonLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\EntityFramework.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\CommonLayer.pdb
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\EntityFramework.xml
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\obj\Debug\DataAccessLayer.csprojResolveAssemblyReference.cache
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.Initial.resources
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.CreateBookDb.resources
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\obj\Debug\DataAccessLayer.Migrations.AddRolesInUserDb.resources
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\obj\Debug\DataAccessLayer.csproj.GenerateResource.Cache
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\obj\Debug\DataAccessLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\DataAccessLayer\obj\Debug\DataAccessLayer.pdb

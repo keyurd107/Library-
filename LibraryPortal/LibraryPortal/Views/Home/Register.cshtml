@@ -1,0 +1,179 @@
+﻿
+@model LibraryPortal.ViewModel.RegisterFormViewModel
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User Registration</h2>
+<br/>
+@using (Html.BeginForm("LogIn", "Home"))
+{
+    <div class="container">
+    <div class="form-group" class="row">
+       <div class="col-md-3 "> @Html.LabelFor(m => m.Registration.Username)</div>
+      <div class="col-md-3">  @Html.TextBoxFor(m => m.Registration.Username, new { @class = "form-control" })</div>
+
+        <div class="col-md-3">
+            @Html.ValidationMessageFor(m => m.Registration.Username)</div>
+
+    </div>
+     </div>
+     <br/>
+
+        <div class="container">
+            <div class="form-group" class="row">
+                <div class="col-md-3 ">
+                    @Html.LabelFor(m => m.Registration.Password)
+                </div>
+                <div class="col-md-3 ">
+                    @Html.TextBoxFor(m => m.Registration.Password, new { @class = "form-control" })
+                </div>
+
+                <div class="col-md-3 ">
+                    @Html.ValidationMessageFor(m => m.Registration.Password)
+                </div>
+
+            </div>
+            </div>
+            <br/>
+
+            <div class="container">
+
+                <div class="form-group" class="row">
+                    <div class="col-md-3 ">
+                        @Html.LabelFor(m => m.Registration.Name)</div>
+                        <div class="col-md-3 ">
+                            @Html.TextBoxFor(m => m.Registration.Name, new { @class = "form-control" })</div>
+
+                            <div class="col-md-3 ">
+                                @Html.ValidationMessageFor(m => m.Registration.Name)</div>
+
+
+                            </div>
+                </div>
+                <br/>
+                <div class="container">
+                    <div class="form-group" class="row">
+                        <div class="col-md-3 ">
+                            @Html.LabelFor(m => m.Registration.EmailId)</div>
+                            <div class="col-md-3 ">
+                                @Html.TextBoxFor(m => m.Registration.EmailId, new { @class = "form-control" })</div>
+
+                                <div class="col-md-3 ">
+                                    @Html.ValidationMessageFor(m => m.Registration.EmailId)</div>
+
+                                </div>
+                    </div>
+                    <br/>
+
+                    <div class="container">
+                        <div class="form-group" class="row">
+                            <div class="col-md-3 ">
+                                @Html.LabelFor(m => m.Registration.Contact)</div>
+                                <div class="col-md-3 ">
+                                    @Html.TextBoxFor(m => m.Registration.Contact, new { @class = "form-control" })</div>
+
+                                    <div class="col-md-3 ">
+                                        @Html.ValidationMessageFor(m => m.Registration.Contact)</div>
+
+                                    </div>
+                        </div>
+                        <br/>
+
+                        <div class="container">
+                            <div class="form-group" class="row">
+                                <div class="col-md-3 ">
+                                    @Html.LabelFor(m => m.Registration.Address.AddressLineOne)</div>
+                                    <div class="col-md-3 ">
+                                        @Html.TextBoxFor(m => m.Registration.Address.AddressLineOne, new { @class = "form-control" })</div>
+
+                                        <div class="col-md-3 ">
+                                            @Html.ValidationMessageFor(m => m.Registration.Address.AddressLineOne)</div>
+                                    </div>
+                        </div>
+                        <br/>
+
+                        <div class="container">
+                            <div class="form-group" class="row">
+                                <div class="col-md-3 ">
+                                    @Html.LabelFor(m => m.Registration.Address.AddressLineTwo)</div>
+                                    <div class="col-md-3 ">
+                                        @Html.TextBoxFor(m => m.Registration.Address.AddressLineTwo, new { @class = "form-control" })</div>
+
+                                        <div class="col-md-3 ">
+                                            @Html.ValidationMessageFor(m => m.Registration.Address.AddressLineTwo)</div>
+
+                                    </div>
+                            </div>
+                            <br/>
+
+                            <div class="container">
+                                <div class="form-group" class="row">
+                                    <div class="col-md-3 ">
+                                        @Html.LabelFor(m => m.Registration.Address.Landmark)</div>
+                                    <div class="col-md-3 ">
+                                        @Html.TextBoxFor(m => m.Registration.Address.Landmark, new { @class = "form-control" })</div>
+
+                                    <div class="col-md-3 ">
+                                        @Html.ValidationMessageFor(m => m.Registration.Address.Landmark)</div>
+
+                                    </div>
+                                </div>
+                                <br/>
+
+                                <div class="container">
+                                    <div class="form-group" class="row">
+                                        <div class="col-md-3 ">
+                                            @Html.LabelFor(m => m.Registration.Address.city)</div>
+                                        <div class="col-md-3 ">
+                                            @Html.TextBoxFor(m => m.Registration.Address.city, new { @class = "form-control" })</div>
+
+                                        <div class="col-md-3 ">@Html.ValidationMessageFor(m => m.Registration.Address.city)</div>
+
+                                    </div>
+                                    </div>
+                                    <br/>
+
+                                    <div class="container">
+                                        <div class="form-group" class="row">
+                                            <div class="col-md-3 ">
+                                                @Html.LabelFor(m => m.Registration.Address.State)</div>
+                                                <div class="col-md-3 ">
+                                                    @Html.TextBoxFor(m => m.Registration.Address.State, new { @class = "form-control" })</div>
+
+                                                    <div class="col-md-3 ">
+                                                        @Html.ValidationMessageFor(m => m.Registration.Address.State)</div>
+
+                                                    </div>
+                                        </div>
+                                        <br/>
+
+
+                                        <div class="container">
+                                            <div class="form-group" class="row">
+                                                <div class="col-md-3 ">
+                                                    @Html.LabelFor(m => m.Registration.Address.Pincode)</div>
+                                                    <div class="col-md-3 ">
+                                                        @Html.TextBoxFor(m => m.Registration.Address.Pincode, new { @class = "form-control" })</div>
+
+                                                        <div class="col-md-3 ">
+                                                            @Html.ValidationMessageFor(m => m.Registration.Address.Pincode)</div>
+
+                                                        </div>
+                                            </div>
+                                            <br/>
+
+                                            <button type="submit" class="btn btn-primary">Register</button>
+                                            }
+
+                                            @section scripts
+{
+                                                @Scripts.Render("~/bundles/jqueryval")
+                                            }
+
+
+
+
+
+

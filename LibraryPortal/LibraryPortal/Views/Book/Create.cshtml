@@ -1,0 +1,87 @@
+﻿@model CommonLayer.Book
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Create</h2>
+@using (Html.BeginForm("AddBook", "Book"))
+{
+    <div class="container">
+        <div class="form-group" class="row">
+            <div class="col-md-3 "> @Html.LabelFor(m => m.Isbn)</div>
+            <div class="col-md-3">  @Html.TextBoxFor(m => m.Isbn, new { @class = "form-control" })</div>
+
+            <div class="col-md-3">
+                @Html.ValidationMessageFor(m => m.Isbn)
+            </div>
+
+        </div>
+    </div>
+    <br />
+
+    <div class="container">
+        <div class="form-group" class="row">
+            <div class="col-md-3 "> @Html.LabelFor(m => m.Title)</div>
+            <div class="col-md-3">  @Html.TextBoxFor(m => m.Title, new { @class = "form-control" })</div>
+
+            <div class="col-md-3">
+                @Html.ValidationMessageFor(m => m.Title)
+            </div>
+
+        </div>
+    </div>
+    <br />
+
+    <div class="container">
+        <div class="form-group" class="row">
+            <div class="col-md-3 "> @Html.LabelFor(m => m.Author)</div>
+            <div class="col-md-3">  @Html.TextBoxFor(m => m.Author, new { @class = "form-control" })</div>
+
+            <div class="col-md-3">
+                @Html.ValidationMessageFor(m => m.Author)
+            </div>
+
+        </div>
+    </div>
+    <br />
+
+    <div class="container">
+        <div class="form-group" class="row">
+            <div class="col-md-3 "> @Html.LabelFor(m => m.Publish)</div>
+            <div class="col-md-3">  @Html.TextBoxFor(m => m.Publish, "{0 : d  MMM yyyy}", new { @class = "form-control" })</div>
+
+            <div class="col-md-3">
+                @Html.ValidationMessageFor(m => m.Publish)
+            </div>
+
+        </div>
+    </div>
+    <br />
+
+    <div class="container">
+        <div class="form-group" class="row">
+            <div class="col-md-3 "> @Html.LabelFor(m => m.Price)</div>
+            <div class="col-md-3">  @Html.TextBoxFor(m => m.Price, new { @class = "form-control" })</div>
+
+            <div class="col-md-3">
+                @Html.ValidationMessageFor(m => m.Price)
+            </div>
+
+        </div>
+    </div>
+    <br />
+
+    @Html.HiddenFor(m => m.Id);
+
+    <button type="submit" class="btn btn-primary">Create</button>
+}
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+

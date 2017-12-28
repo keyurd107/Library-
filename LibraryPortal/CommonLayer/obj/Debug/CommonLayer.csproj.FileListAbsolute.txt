@@ -1,0 +1,5 @@
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\CommonLayer\bin\Debug\CommonLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\CommonLayer\bin\Debug\CommonLayer.pdb
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\CommonLayer\obj\Debug\CommonLayer.csprojResolveAssemblyReference.cache
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\CommonLayer\obj\Debug\CommonLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\CommonLayer\obj\Debug\CommonLayer.pdb

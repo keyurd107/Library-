@@ -1,0 +1,197 @@
+﻿@model IEnumerable<CommonLayer.Book>
+
+@{
+    ViewBag.Title = "DisplayBooks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+table, th, td {
+
+   background-color: #dddddd;
+   
+}
+    </style>
+
+<h2 style="color:grey"><marquee direction="right">DisplayBooks</marquee></h2>
+@if (User.IsInRole("Admin"))
+{
+    @*@Html.ActionLink("Create", "Create", "Book", null, new { @class = "btn btn-primary" })*@
+    <a href="#" class="btn btn-primary CreateLink">Create</a>
+}
+
+<p>
+    @*@Html.ActionLink("Create New", "Create")*@
+</p>
+
+<table class="table  table-hover table-bordered table-striped " >
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Isbn)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Author)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Price)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Isbn)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Author)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Publish)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @if (User.IsInRole("Admin"))
+                {
+                    @*@Html.ActionLink("Update", "Update", new { id = item.Id })*@
+                    <a href="#" class="UpdateLink" id="@item.Id">Update</a>
+
+                }
+
+
+                @if (User.IsInRole("Admin"))
+                {
+                    <a href="#" class="deleteLink" id="@item.Id"> Delete</a>
+
+                    //@Html.ActionLink("Delete", "Delete", new { id = item.Id })
+                }
+
+
+
+
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+
+
+<div class="modal" id="deleteModal">
+
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Delete Book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="deletebookId">
+                <p>Are you sure to delete this book ?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="YesButton" class="btn btn-primary">Yes</button>
+                <button type="button" id="NoButton" class="btn btn-secondary" data-dismiss="modal">No</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal" id="UpdateModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Update Book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="BookId">
+                <input type="hidden" id="BookIsbn">
+                @Html.DisplayNameFor(model => model.Title)
+                <input type="text" id="BookTitle" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Author)
+                <input type="text" id="BookAuthor" class="form-control">
+                <br />
+
+                @Html.DisplayNameFor(model => model.Price)
+                <input type="number" id="BookPrice" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Publish)
+                <input type="date" id="BookPublish" class="form-control">
+                <br />
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="SaveButton" class="btn btn-primary">Save</button>
+                <button type="button" id="CancelButton" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal" id="CreateModal">
+    <div class="modal-dialog " style="width:344px" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="BookId">
+                @Html.DisplayNameFor(model => model.Isbn)
+                <input type="text" id="CreateBookIsbn" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Title)
+                <input type="text" id="CreateBookTitle" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Author)
+                <input type="text" id="CreateBookAuthor" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Publish)
+                <input type="date" id="CreateBookPublish" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Price)
+                <input type="number" id="CreateBookPrice" class="form-control">
+                <br />
+
+                <span id="showErrorMessage" style="color:red;"></span>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="AddButton" class="btn btn-primary">Add</button>
+                <button type="button" id="CancelButton" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+
+    <script type="text/javascript" src="~/Scripts/MainScript.js"></script>
+
+
+}
+

@@ -1,0 +1,11 @@
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\bin\Debug\BussinessLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\bin\Debug\BussinessLayer.pdb
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\bin\Debug\CommonLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\bin\Debug\DataAccessLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\bin\Debug\EntityFramework.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\bin\Debug\CommonLayer.pdb
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\bin\Debug\DataAccessLayer.pdb
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\bin\Debug\EntityFramework.xml
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\obj\Debug\BussinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\obj\Debug\BussinessLayer.dll
+C:\Users\keyur.deshpande\documents\visual studio 2015\Projects\LibraryPortal\BussinessLayer\obj\Debug\BussinessLayer.pdb

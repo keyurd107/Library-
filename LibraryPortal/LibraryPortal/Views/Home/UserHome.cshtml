@@ -1,0 +1,63 @@
+﻿
+@model CommonLayer.Book
+@{
+    ViewBag.Title = "UserHome";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+
+<body background="~/images/images.jpeg" style="background-size:1360px">
+    <div class="jumbotron">
+<h2>Welcome  @User.Identity.Name</h2>
+@if (User.IsInRole("Admin"))
+{
+    @*@Html.ActionLink("Create", "Create", "Book", null, new { @class = "btn btn-primary" })*@
+    <a href="#" class="btn btn-primary CreateLink">Create</a>
+}
+@Html.ActionLink("DisplayBooks", "DisplayBooks", "Book", null, new { @class = "btn btn-primary" })
+</div>
+
+<div class="modal" id="CreateModal" >
+    <div class="modal-dialog" role="document" style="width:344px">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Book</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <input type="hidden" id="BookId">
+                @Html.DisplayNameFor(model => model.Isbn)
+                <input type="text" id="CreateBookIsbn" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Title)
+                <input type="text" id="CreateBookTitle" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Author)
+                <input type="text" id="CreateBookAuthor" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Publish)
+                <input type="date" id="CreateBookPublish" class="form-control">
+                <br />
+                @Html.DisplayNameFor(model => model.Price)
+                <input type="number" id="CreateBookPrice" class="form-control">
+                <br />
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" id="AddButton" class="btn btn-primary">Add</button>
+                <button type="button" id="CancelButton" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+
+@section scripts
+{
+        @Scripts.Render("~/bundles/jqueryval")
+        <script type="text/javascript" src="~/Scripts/MainScript.js"></script>
+
+}

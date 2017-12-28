@@ -1,0 +1,58 @@
+﻿@model CommonLayer.Login
+
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>LogIn</h2>
+@ViewBag.msg
+@using (Html.BeginForm("LogIn", "Home"))
+
+{ 
+
+        @Html.ValidationSummary(true, "Login details are wrong", new { @style = "color:red" })
+
+        <div class="container">
+            <div class="form-group" class="row">
+                <div class="col-md-3 "> @Html.LabelFor(m => m.Username)</div>
+                <div class="col-md-3">  @Html.TextBoxFor(m => m.Username, new { @class = "form-control" })</div>
+
+                <div class="col-md-3">
+                    @Html.ValidationMessageFor(m => m.Username)
+                </div>
+
+            </div>
+        </div>
+        <br />
+
+        <div class="container">
+            <div class="form-group" class="row">
+                <div class="col-md-3 ">
+                    @Html.LabelFor(m => m.Password)
+                </div>
+                <div class="col-md-3 ">
+                    @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
+                </div>
+
+                <div class="col-md-3 ">
+                    @Html.ValidationMessageFor(m => m.Password)
+                </div>
+
+            </div>
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">LogIn</button>
+    
+}
+        
+        @section scripts
+{
+            @Scripts.Render("~/bundles/jqueryval")
+
+
+        }
+
+
+
+
